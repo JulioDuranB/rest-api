@@ -1,0 +1,29 @@
+GET http://localhost:1234/movies
+
+#########
+GET http://localhost:1234/movies?genre=Comic
+
+##########
+GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+############
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "title": "sherk",
+    "year": 2000,
+    "director": "Picture",
+    "duration": 125,
+    "poster": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fplay-lh.googleusercontent.com%2FSU1hRumo0t-zFebkVVlesNb6a1mHYPxxQJX-49jYayrMIrsmU135uxgcOglMcCB_kHfb%3Dw240-h480-rw&tbnid=RHvLivMmcYQMUM&vet=12ahUKEwjfzKiW45SEAxVhD2IAHXfUChoQMygBegQIARBw..i&imgrefurl=https%3A%2F%2Fplay.google.com%2Fstore%2Fmovies%2Fdetails%2FShrek%3Fid%3D4GF8YqoTefM%26hl%3Des_419&docid=t1glyh9R1FRYlM&w=240&h=360&q=shrek&ved=2ahUKEwjfzKiW45SEAxVhD2IAHXfUChoQMygBegQIARBw",
+    "genre": ["Action","Drama"],
+    "rate": 7.5
+}
+
+### Actualizar una película
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+  "year": 2022
+}
