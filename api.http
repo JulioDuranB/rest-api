@@ -1,7 +1,7 @@
 GET http://localhost:1234/movies
 
-#########
-GET http://localhost:1234/movies?genre=Comic
+##########
+GET http://localhost:1234/movies?genre=Drama
 
 ##########
 GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
@@ -27,3 +27,6 @@ Content-Type: application/json
 {
   "year": 2022
 }
+
+#### borrar pelicula
+DELETE http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
